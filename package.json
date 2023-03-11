@@ -1,11 +1,11 @@
 {
-  "name": "@codrjs/template",
+  "name": "@codrjs/config",
   "version": "1.0.0",
-  "description": "",
+  "description": "Codr configuration, unified",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
   "types": "./types/index.d.ts",
-  "repository": "git@github.com:CodrJS/ts-npm-template.git",
+  "repository": "git@github.com:CodrJS/config.git",
   "author": "Dylan Bulmer <dylan@dylanbulmer.com>",
   "license": "MIT",
   "type": "module",
@@ -46,5 +46,6 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
+    "dotenv": "^16.0.3"
   }
 }
