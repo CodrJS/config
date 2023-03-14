@@ -37,16 +37,18 @@ jobs:
         with:
           name: dist
           path: dist/
+      - name: Create .env
+        run: |
+          touch .env
+          echo ENV=${{ env.ENV }} >> .env
+          echo EXPRESS_HOST=${{ env.EXPRESS_HOST }} >> .env
+          echo EXPRESS_PORT=${{ env.EXPRESS_PORT }} >> .env
+          echo MONGO_URI=${{ env.MONGO_URI }} >> .env
+          echo KAFKA_CONSUMER_GROUP=${{ env.KAFKA_CONSUMER_GROUP }} >> .env
+          echo JWT_SECRET=${{ env.JWT_SECRET }} >> .env
+          echo JWT_ISSUER=${{ env.JWT_ISSUER }} >> .env
       - run: yarn
       - run: yarn test
-        env:
-          ENV: dev
-          EXPRESS_HOST: 0.0.0.0
-          EXPRESS_PORT: 3000
-          MONGO_URI: mongodb+srv://localhost/codr?replicaSet=mongodb&ssl=false
-          KAFKA_CONSUMER_GROUP: codr.service.test
-          JWT_SECRET: jwt-secret
-          JWT_ISSUER: codrjs.com
 
   publish-gpr:
     name: Publish to NPM
