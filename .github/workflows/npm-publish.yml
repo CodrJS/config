@@ -41,14 +41,14 @@ jobs:
         run: |
           touch .env
 
-          echo ENV=${{ env.ENV }} >> .env
-          echo EXPRESS_HOST=${{ env.EXPRESS_HOST }} >> .env
-          echo EXPRESS_PORT=${{ env.EXPRESS_PORT }} >> .env
-          echo MONGO_URI=${{ env.MONGO_URI }} >> .env
-          echo KAFKA_CONSUMER_GROUP=${{ env.KAFKA_CONSUMER_GROUP }} >> .env
-          echo JWT_SECRET=${{ env.JWT_SECRET }} >> .env
-          echo JWT_ISSUER=${{ env.JWT_ISSUER }} >> .env
-          
+          echo ENV=${{ vars.ENV }} >> .env
+          echo EXPRESS_HOST=${{ vars.EXPRESS_HOST }} >> .env
+          echo EXPRESS_PORT=${{ vars.EXPRESS_PORT }} >> .env
+          echo MONGO_URI=${{ vars.MONGO_URI }} >> .env
+          echo KAFKA_CONSUMER_GROUP=${{ vars.KAFKA_CONSUMER_GROUP }} >> .env
+          echo JWT_SECRET=${{ vars.JWT_SECRET }} >> .env
+          echo JWT_ISSUER=${{ vars.JWT_ISSUER }} >> .env
+
           cat .env
       - run: yarn
       - run: yarn test
