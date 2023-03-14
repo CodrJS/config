@@ -16,37 +16,43 @@ yarn add @codrjs/config
 ```
 
 Import the config package and use the variables you need!
-> ***Please note:** This package assumes you have defined the environment variables you are accessing and does **no** error checking.*
+
+> **\*Please note:** This package assumes you have defined the environment variables you are accessing and does **no** error checking.\*
 
 ```ts
 /* Import the config package */
-import Config, { ExpressConfig } from "@codrjs/config";
+import config, { ExpressConfig } from "@codrjs/config";
 import { express } from "express";
 
 const app = express();
 
-app.listen(Config.express.port, Config.express.host, () => {
-  console.log(`Server is starting on ${ExpressConfig.host}:${ExpressConfig.port}`)
+app.listen(config.express.port, config.express.host, () => {
+  console.log(
+    `Server is starting on ${ExpressConfig.host}:${ExpressConfig.port}`,
+  );
 });
 ```
 
 ## Environemnt Variable Names
 
-Location of environment variable is postfixed to `Config.{location}` (e.g. `Config.express.host`). 
+Location of environment variable is postfixed to `Config.{location}` (e.g. `Config.express.host`).
 
-| Env var                | Location               | Required | Description                    |
-|------------------------|------------------------|----------|--------------------------------|
-| `ENV`                  | `env`                  | `true`   | Deployment envionment - `dev`, `qa`, `stage`, `prod` |
-| `EXPRESS_HOST`         | `express.host`         | `false`  | Express server - listener host |
-| `EXPRESS_PORT`         | `express.port`         | `false`  | Express server - listener port |
-| `MONGO_URI`            | `mongo.uri`            | `false`  | MongoDB - server URL, please include username and password to this string. |
-| `KAFKA_CONSUMER_GROUP` | `kafka.consumer.group` | `false`  | Kafka server - consumer group  |
+| Env var                | Location               | Required | Description                                                                             |
+| ---------------------- | ---------------------- | -------- | --------------------------------------------------------------------------------------- |
+| `ENV`                  | `env`                  | `true`   | Deployment envionment - `dev`, `qa`, `stage`, `prod`                                    |
+| `EXPRESS_HOST`         | `express.host`         | `false`  | Express server - listener host                                                          |
+| `EXPRESS_PORT`         | `express.port`         | `false`  | Express server - listener port                                                          |
+| `MONGO_URI`            | `mongo.uri`            | `false`  | MongoDB - server URL, please include username and password to this string.              |
+| `KAFKA_CONSUMER_GROUP` | `kafka.consumer.group` | `false`  | Kafka server - consumer group                                                           |
+| `JWT_SECRET`           | `jwt.secret`           | `true`   | JWT - secret, key to decode jwt, must be the same across all services in an environment |
+| `JWT_ISSUER`           | `jwt.issuer`           | `true`   | JWT - issuer, default `codrjs.com`                                                      |
 
 ## TODO
 
 - [ ] ...
 
 ## Contributing
+
 ```bash
 # Clone the repo
 git clone git@github.com:CodrJS/config.git

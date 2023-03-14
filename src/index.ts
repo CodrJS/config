@@ -1,4 +1,4 @@
-import dotenv from "dotenv";
-dotenv.config();
+import config from "./config";
 
-console.log("Hello World");
+export * from "./config";
+export default config
