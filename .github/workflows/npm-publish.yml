@@ -44,7 +44,7 @@ jobs:
           echo ENV=${{ vars.ENV }} >> .env
           echo EXPRESS_HOST=${{ vars.EXPRESS_HOST }} >> .env
           echo EXPRESS_PORT=${{ vars.EXPRESS_PORT }} >> .env
-          echo MONGO_URI=${{ vars.MONGO_URI }} >> .env
+          echo MONGO_URI="${{ vars.MONGO_URI }}" >> .env
           echo KAFKA_CONSUMER_GROUP=${{ vars.KAFKA_CONSUMER_GROUP }} >> .env
           echo JWT_SECRET=${{ vars.JWT_SECRET }} >> .env
           echo JWT_ISSUER=${{ vars.JWT_ISSUER }} >> .env
