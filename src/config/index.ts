@@ -6,7 +6,7 @@ import { JWTConfig } from "./JWTConfig";
 import { KafkaConfig } from "./KafkaConfig";
 import { MonogoConfig } from "./MongoConfig";
 
-const config = {
+const Config = {
   env: process.env.ENV as "dev" | "qa" | "stage" | "prod",
   express: ExpressConfig,
   jwt: JWTConfig,
@@ -15,4 +15,4 @@ const config = {
 };
 
 export { ExpressConfig, JWTConfig, KafkaConfig, MonogoConfig };
-export default config;
+export default Config;

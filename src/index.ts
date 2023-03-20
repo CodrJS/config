@@ -1,4 +1,4 @@
-import config from "./config";
+import Config from "./config";
 
 export * from "./config";
-export default config
+export default Config
