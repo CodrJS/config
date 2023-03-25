@@ -37,17 +37,23 @@ app.listen(config.express.port, config.express.host, () => {
 
 Location of environment variable is postfixed to `Config.{location}` (e.g. `Config.express.host`).
 
-| Env var                | Location               | Description                                                                             |
-| ---------------------- | ---------------------- | --------------------------------------------------------------------------------------- |
-| `ENV`                  | `env`                  | Deployment envionment - `dev`, `qa`, `stage`, `prod`                                    |
-| `EXPRESS_HOST`         | `express.host`         | Express server - listener host                                                          |
-| `EXPRESS_PORT`         | `express.port`         | Express server - listener port                                                          |
-| `MONGO_URI`            | `mongo.uri`            | MongoDB - server URL, please include username and password to this string               |
-| `KAFKA_BROKERS`        | `kafka.brokers`        | Kafka server - comma seperated locations of the kafka brokers                           |
-| `KAFKA_CLIENT_ID`      | `kafka.clientId`       | Kafka server - name of the kafka cluster                                                |
-| `KAFKA_CONSUMER_GROUP` | `kafka.consumer.group` | Kafka server - consumer group                                                           |
-| `JWT_SECRET`           | `jwt.secret`           | JWT - secret, key to decode jwt, must be the same across all services in an environment |
-| `JWT_ISSUER`           | `jwt.issuer`           | JWT - issuer, default `codrjs.com`                                                      |
+| Env var                 | Location                | Description                                                                             |
+| ----------------------- | ----------------------- | --------------------------------------------------------------------------------------- |
+| `ENV`                   | `env`                   | Deployment envionment - `dev`, `qa`, `stage`, `prod`                                    |
+| `AWS_REGION`            | `aws.region`            | AWS - deployment region                                                                 |
+| `AWS_SES_API_VERSION`   | `aws.ses.api.version`   | AWS SES - api version                                                                   |
+| `AWS_SES_ACCESS_KEY`    | `aws.ses.access.key`    | AWS SES - IAM access key id                                                             |
+| `AWS_SES_ACCESS_SECRET` | `aws.ses.access.secret` | AWS SES - IAM access key secret                                                         |
+| `EMAIL_FROM`            | `email.from`            | Email - from address                                                                    |
+| `EMAIL_REPLY_TO`        | `email.replyto`         | Email - reply to address(es)                                                            |
+| `EXPRESS_HOST`          | `express.host`          | Express server - listener host                                                          |
+| `EXPRESS_PORT`          | `express.port`          | Express server - listener port                                                          |
+| `MONGO_URI`             | `mongo.uri`             | MongoDB - server URL, please include username and password to this string               |
+| `KAFKA_BROKERS`         | `kafka.brokers`         | Kafka server - comma seperated locations of the kafka brokers                           |
+| `KAFKA_CLIENT_ID`       | `kafka.clientId`        | Kafka server - name of the kafka cluster                                                |
+| `KAFKA_CONSUMER_GROUP`  | `kafka.consumer.group`  | Kafka server - consumer group                                                           |
+| `JWT_SECRET`            | `jwt.secret`            | JWT - secret, key to decode jwt, must be the same across all services in an environment |
+| `JWT_ISSUER`            | `jwt.issuer`            | JWT - issuer, default `codrjs.com`                                                      |
 
 ## TODO
 
