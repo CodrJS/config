@@ -52,6 +52,7 @@ Location of environment variable is postfixed to `Config.{location}` (e.g. `Conf
 | `KAFKA_BROKERS`         | `kafka.brokers`         | Kafka server - comma seperated locations of the kafka brokers                           |
 | `KAFKA_CLIENT_ID`       | `kafka.clientId`        | Kafka server - name of the kafka cluster                                                |
 | `KAFKA_CONSUMER_GROUP`  | `kafka.consumer.group`  | Kafka server - consumer group                                                           |
+| `JWT_ALGORITHM`         | `jwt.algorithm`         | JWT - algorithm, default `HS256`                                                        |
 | `JWT_SECRET`            | `jwt.secret`            | JWT - secret, key to decode jwt, must be the same across all services in an environment |
 | `JWT_ISSUER`            | `jwt.issuer`            | JWT - issuer, default `codrjs.com`                                                      |
 
