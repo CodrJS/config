@@ -1,6 +1,6 @@
 {
   "name": "@codrjs/config",
-  "version": "1.0.3",
+  "version": "1.0.3-patch1",
   "description": "Codr configuration, unified",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
