@@ -1,10 +1,10 @@
 export const NodeConfig: {
-  env: string;
+  env: "production" | "developement" | "testing";
   version: string;
   modules: string[];
   yarnVersion: string;
 } = {
-  env: process.env.NODE_ENV as string,
+  env: process.env.NODE_ENV as "production" | "developement" | "testing",
   version: process.env.NODE_VERSION as string,
   modules: Object.keys(process.env)
     .filter(m => /npm_package_dependencies_/g.test(m))
