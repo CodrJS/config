@@ -42,7 +42,7 @@ Location of environment variable is postfixed to `Config.{location}` (e.g. `Conf
 | `ENV`                       | `env`                           | Deployment envionment - `dev`, `qa`, `stage`, `prod`                                    |
 | `HOSTNAME`                  | `hostname`                      | Deployment docker hostname                                                              |
 | `npm_package_name`          | `name`                          | Deployment service name - example: codr-user-user                                       |
-| `npm_package_version`       | `version`                       | Deployment version - example: v1.0.0                                                    |
+| `npm_package_version`       | `version`                       | Deployment version - example: `1.0.0`                                                   |
 | `AWS_REGION`                | `aws.region`                    | AWS - deployment region                                                                 |
 | `AWS_SES_API_VERSION`       | `aws.ses.api.version`           | AWS SES - api version                                                                   |
 | `AWS_SES_ACCESS_KEY`        | `aws.ses.access.key`            | AWS SES - IAM access key id                                                             |
@@ -62,20 +62,20 @@ Location of environment variable is postfixed to `Config.{location}` (e.g. `Conf
 | `KAFKA_CONSUMER_GROUP`      | `kafka.consumer.group`          | Kafka server - consumer group                                                           |
 | `MONGO_URI`                 | `mongo.uri`                     | MongoDB - server URL, please include username and password to this string               |
 | `NODE_ENV`                  | `node.env`                      | Node environment - `development`,`production`, `testing`                                |
-| `NODE_VERSION`              | `node.verison`                  | Node version - example: v16.19.1                                                        |
+| `NODE_VERSION`              | `node.verison`                  | Node version - example: `16.19.1`                                                       |
 | N/A                         | `node.modules`                  | Node modules - string array of all dependencies                                         |
 | `YARN_VERSION`              | `node.yarnVersion`              | Node - package manager version                                                          |
 | `OPENAPI_INFO_TITLE`        | `openapi.info.title`            | OpenAPI - documentation title                                                           |
 | `OPENAPI_INFO_DESC`         | `openapi.info.description`      | OpenAPI - documentation description                                                     |
-| `OPENAPI_SERVER_ONE_HOST`   | `openapi.server[0].host`        | OpenAPI - server one host                                                               |
+| `OPENAPI_SERVER_ONE_URL`    | `openapi.server[0].url`         | OpenAPI - server one url                                                                |
 | `OPENAPI_SERVER_ONE_DESC`   | `openapi.server[0].description` | OpenAPI - server one description                                                        |
-| `OPENAPI_SERVER_TWO_HOST`   | `openapi.server[1].host`        | OpenAPI - server two host                                                               |
+| `OPENAPI_SERVER_TWO_URL`    | `openapi.server[1].url`         | OpenAPI - server two url                                                                |
 | `OPENAPI_SERVER_TWO_DESC`   | `openapi.server[1].description` | OpenAPI - server two description                                                        |
-| `OPENAPI_SERVER_THREE_HOST` | `openapi.server[2].host`        | OpenAPI - server three host                                                             |
+| `OPENAPI_SERVER_THREE_URL`  | `openapi.server[2].url`         | OpenAPI - server three url                                                              |
 | `OPENAPI_SERVER_THREE_DESC` | `openapi.server[2].description` | OpenAPI - server three description                                                      |
-| `OPENAPI_SERVER_FOUR_HOST`  | `openapi.server[3].host`        | OpenAPI - server four host                                                              |
+| `OPENAPI_SERVER_FOUR_URL`   | `openapi.server[3].url`         | OpenAPI - server four url                                                               |
 | `OPENAPI_SERVER_FOUR_DESC`  | `openapi.server[3].description` | OpenAPI - server four description                                                       |
-| `OPENAPI_SERVER_FIVE_HOST`  | `openapi.server[4].host`        | OpenAPI - server five host                                                              |
+| `OPENAPI_SERVER_FIVE_URL`   | `openapi.server[4].url`         | OpenAPI - server five url                                                               |
 | `OPENAPI_SERVER_FIVE_DESC`  | `openapi.server[4].description` | OpenAPI - server five description                                                       |
 
 ## TODO
