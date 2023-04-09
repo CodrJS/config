@@ -9,22 +9,27 @@ export const NodeConfig: {
   modules: Object.keys(process.env)
     .filter(m => /npm_package_dependencies_/g.test(m))
     .map(m => [m, process.env[m]] as [string, string])
-    .map(m => m[0].replace(/npm_package_dependencies_/g, ""))
-    .map(m => [
-      m[0]
-        .split("_")
-        .map((p, idx) =>
-          p === ""
-            ? "@"
-            : idx === m[0].split("_").length - 1 && m[0].split("_").length !== 1
-            ? `/${p}`
-            : p,
-        )
-        .join(""),
-      m[1],
-    ])
-    .reduce((acc, curr) => {
-      return (acc[curr[0]] = curr[1]);
-    }, {}),
+    .map(m => [m[0].replace(/npm_package_dependencies_/g, ""), m[1]])
+    .map(
+      m =>
+        [
+          m[0]
+            .split("_")
+            .map((p, idx) =>
+              p === ""
+                ? "@"
+                : idx === m[0].split("_").length - 1 &&
+                  m[0].split("_").length !== 1
+                ? `/${p}`
+                : p,
+            )
+            .join(""),
+          m[1],
+        ] as string[],
+    )
+    .reduce((acc, [key, value]) => {
+      acc[key] = value;
+      return acc;
+    }, {} as Record<string, string>),
   yarnVersion: process.env.YARN_VERSION as string,
 };
