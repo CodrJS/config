@@ -41,12 +41,16 @@ Location of environment variable is postfixed to `Config.{location}` (e.g. `Conf
 | --------------------------- | ------------------------------- | --------------------------------------------------------------------------------------- |
 | `ENV`                       | `env`                           | Deployment envionment - `dev`, `qa`, `stage`, `prod`                                    |
 | `HOSTNAME`                  | `hostname`                      | Deployment docker hostname                                                              |
-| `npm_package_name`          | `name`                          | Deployment service name - example: codr-user-user                                       |
-| `npm_package_version`       | `version`                       | Deployment version - example: `1.0.0`                                                   |
+| Provided via npm            | `name`                          | Deployment service name - example: codr-user-user                                       |
+| Provided via npm            | `version`                       | Deployment version - example: `1.0.0`                                                   |
 | `AWS_REGION`                | `aws.region`                    | AWS - deployment region                                                                 |
 | `AWS_SES_API_VERSION`       | `aws.ses.api.version`           | AWS SES - api version                                                                   |
 | `AWS_SES_ACCESS_KEY`        | `aws.ses.access.key`            | AWS SES - IAM access key id                                                             |
 | `AWS_SES_ACCESS_SECRET`     | `aws.ses.access.secret`         | AWS SES - IAM access key secret                                                         |
+| `CODR_USER_AUTH_SVC_URL`    | `codr.svc.user.auth`            | Codr - user authentication service                                                      |
+| `CODR_USER_PROFILE_SVC_URL` | `codr.svc.user.profile`         | Codr - user profile entity service                                                      |
+| `CODR_USER_SESSION_SVC_URL` | `codr.svc.user.session`         | Codr - user session entity service                                                      |
+| `CODR_USER_USER_SVC_URL`    | `codr.svc.user.user`            | Codr - user entity service                                                              |
 | `EMAIL_FROM`                | `email.from`                    | Email - from address                                                                    |
 | `EMAIL_REPLY_TO`            | `email.replyto`                 | Email - reply to address(es)                                                            |
 | `EXPRESS_HOST`              | `express.host`                  | Express server - listener host                                                          |
@@ -61,10 +65,10 @@ Location of environment variable is postfixed to `Config.{location}` (e.g. `Conf
 | `KAFKA_CLIENT_ID`           | `kafka.clientId`                | Kafka server - name of the kafka cluster                                                |
 | `KAFKA_CONSUMER_GROUP`      | `kafka.consumer.group`          | Kafka server - consumer group                                                           |
 | `MONGO_URI`                 | `mongo.uri`                     | MongoDB - server URL, please include username and password to this string               |
-| `NODE_ENV`                  | `node.env`                      | Node environment - `development`,`production`, `testing`                                |
-| `NODE_VERSION`              | `node.verison`                  | Node version - example: `16.19.1`                                                       |
-| N/A                         | `node.modules`                  | Node modules - string array of all dependencies                                         |
-| `YARN_VERSION`              | `node.yarnVersion`              | Node - package manager version                                                          |
+| `NODE_ENV`                  | `node.env`                      | Node environment - `development`, `production`, `testing`                               |
+| Provided via npm            | `node.verison`                  | Node version - example: `16.19.1`                                                       |
+| Provided via npm            | `node.modules`                  | Node modules - string array of all dependencies                                         |
+| Provided via yarn           | `node.yarnVersion`              | Node - package manager version                                                          |
 | `OPENAPI_INFO_TITLE`        | `openapi.info.title`            | OpenAPI - documentation title                                                           |
 | `OPENAPI_INFO_DESC`         | `openapi.info.description`      | OpenAPI - documentation description                                                     |
 | `OPENAPI_SERVER_ONE_URL`    | `openapi.server[0].url`         | OpenAPI - server one url                                                                |

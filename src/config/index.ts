@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import { AWSConfig } from "./AWSConfig";
+import { CodrConfig } from "./CodrConfig";
 import { EmailConfig } from "./EmailConfig";
 import { ExpressConfig } from "./ExpressConfig";
 import { GitConfig } from "./GitConfig";
@@ -20,6 +21,7 @@ const GeneralConfig = {
 
 const Config = {
   aws: AWSConfig,
+  codr: CodrConfig,
   email: EmailConfig,
   express: ExpressConfig,
   jwt: JWTConfig,
@@ -33,6 +35,7 @@ const Config = {
 
 export {
   AWSConfig,
+  CodrConfig,
   EmailConfig,
   ExpressConfig,
   GitConfig,
